@@ -181,5 +181,5 @@ class BaseMutation(object):
 
 
 def authenticated_result(cls, info, callback, **kwargs):
-    result = callback(**kwargs)
+    result = callback(info, **kwargs)
     return cls(**result)
